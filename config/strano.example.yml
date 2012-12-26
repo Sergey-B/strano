@@ -1,13 +1,13 @@
 defaults: &defaults
 
   # Strano's public SSH key with which it will attempt to clone Github repos via.
-  public_ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDT22Cz/+S7TuVTlKmmfgY7r8Ghp5cZE07l4qiaRY0QhF10wK7    7jDWNn7ydz981Vjw2Ua2WMrZwY8ichMJfBz5TiQ8dRe4PmsqByeEzvpsVj4b6pInmLuBQJhSKmpwzF5LSoELLhB    +wjU8tbU92kJYUq7x/aRFfo8vyLuJY34yFGx1X3O6M8iVE+FBc8Vaw0zs/9gFXq3YCG1d2LX39oglbeSMflaSve    w7Y6WwvAPU82H3dXc6THDSJJwz9VNMIphr6SacVg253yjq2hi+R2PDYCOMN8+4Al7kALpsCn2gFomQsjJGh6h7n    9Bojwz2Heq8OQ+6E+nj5dJt86iO+N95t belovtorzhok@gmail.com
+  public_ssh_key: MYPUBLICKEY
 
   # Strano's Github application client ID. See https://github.com/settings/applications
-  github_key: 13c08f49f1d690820783
+  github_key: github-application-client-id
 
   # Strano's Github application secret. See https://github.com/settings/applications
-  github_secret: 3803978cd350b5d458d2c5a31f622783c4377272
+  github_secret: github-application-secret
 
   # The path to where Strano will clone your project's repos.
   #

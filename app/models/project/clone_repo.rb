@@ -1,4 +1,4 @@
-class Project
+ class Project
   class CloneRepo
 
     def self.perform(project_id)
@@ -11,7 +11,7 @@ class Project
       Strano::Repo.clone project.url
 
       capvt=project.cap(%w(-vT)).task_list(:all).sort_by(&:fully_qualified_name).inject({}) {|h,t| h[t.fully_qualified_name]=t.desc; h}
-            capvt.each{|name,desc| Task.create name: name, description: desc, project_id: project.id, author_id:1}
+            capvt.each{|name,desc| Task.create name: 'cap '+name, description: desc, project_id: project.id, author_id:1}
 
       Project.update_all({:updated_at => Time.now,
                           :cloned_at => Time.now,

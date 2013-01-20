@@ -48,6 +48,12 @@
       <li><a href="#info" data-toggle="tab">Information</a></li>
     <%- end -%>
 
+    <%- if resource.cloned? -%>
+
+    <li><a href="#credentials" data-toggle="tab">Credentials</a></li>
+
+    <%- end -%>
+
     <li class="dropdown" data-dropdown="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage... <b class="caret"></b></a>
       <ul class="dropdown-menu">
@@ -59,9 +65,11 @@
   <div class="tab-content">
 
     <%- if resource.cloned? -%>
+      <%= render 'projects/show/credentials' %>
       <%- if resource.capified? && !@project_cap_error -%>
         <%= render 'projects/show/tasks' %>
         <%= render 'projects/show/hidden_tasks' if params[:all_tasks] %>
+
       <%- end -%>
       <%= render 'projects/show/history' unless resource.jobs.empty? %>
     <%- end -%>
